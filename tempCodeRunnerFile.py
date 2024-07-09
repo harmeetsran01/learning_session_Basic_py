@@ -1,2 +1,1 @@
-for Dish in dishes:
-    Dish.show()
+print("{pid} | {name} | {phone} | {email} | {dob} | {gender} | {created_on}".format_map(vars(self)))
