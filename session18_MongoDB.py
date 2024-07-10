@@ -13,3 +13,22 @@ try:
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print(e)
+
+# Get reference to the database
+db = client['aurobises']
+
+# Get Collection Names from DataBase
+collections = db.list_collection_names()
+
+for collection in collections:
+    print(collection)
+
+documents = db['hello'].find() #it will return in list or dictionary
+print(documents)
+
+print(vars(documents))
+# documents = db['users'].find()
+# print(documents)
+
+# for document in documents:
+#     print(document)

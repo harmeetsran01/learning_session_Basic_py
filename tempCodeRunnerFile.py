@@ -1,1 +1,10 @@
-print("{pid} | {name} | {phone} | {email} | {dob} | {gender} | {created_on}".format_map(vars(self)))
+
+# for collection in collections:
+#     print(collection)
+
+
+# documents = db['users'].find()
+# print(documents)
+
+# for document in documents:
+#     print(document)
