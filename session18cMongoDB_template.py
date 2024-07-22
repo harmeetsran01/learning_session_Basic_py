@@ -20,13 +20,28 @@ class MongoDBHelper:
         # for collections in collection:
         #     print(collections)
 
-    def insert(self,document):
+    def insert(self,document,collection="users"):
+        # self.collection=collection
         self.collection.insert_one(document)
         print("Insert done in Collection:",self.collection.name)
+        print("Document inserted in collection:",self.collection.name)
+        # result=self.collection.insert_one(document)
+        # print(result.__inserted_id)
+        # return result
+        
+
+# query as input will act as condition
 
     def fetch(self,query=""):
         documents=self.collection.find(query) #return as list
         return list(documents)
-        
+    
+    def delete(self, query=""):
+        result = self.collection.delete_one(query)
+        print("result is:", result)
 
-MongoDBHelper()
+    def update(self, document, query):
+        document_to_upate = {'$set': document}
+        result = self.collection.update_one(query, document_to_upate)
+        print("result is:", result)
+        

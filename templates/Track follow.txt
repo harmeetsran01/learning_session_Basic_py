@@ -1,0 +1,8 @@
+/ page is built where register is in working.
+Register form records the data in Mongo db (directs with add patient, and add user to db).
+add user only saved name phone email to db only.
+login page working with fetch-user function
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type ObjectId is not JSON serializable
+VIEW PATIEN WORKING. fetching done with collection change input
+search patient is working now wiht Form request need method post and input py needs route too.
